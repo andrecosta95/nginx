@@ -1,4 +1,9 @@
-web:
-  image: nginx
-  ports:
-   - "85:80"
+version: "3"
+services:
+  ngnix:
+    #image: grafana/grafana:5.1.0
+    build: .
+    environment: 
+      - TZ="America/Bahia"
+    ports:
+      - 85:80
